@@ -1,10 +1,7 @@
 name: GitHub actions demo
 run-name: 🛠️ Testing out GitHub actions
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 env:
   owner_name: jwesterl
