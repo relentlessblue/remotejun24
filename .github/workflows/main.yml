@@ -30,8 +30,8 @@ jobs:
         with:
           node-version: '20'
           
-      - name: Uses reusable workflow
-        uses: ./.github/workflows/reuseme.yml@main
+  call-workflow-1-in-local-repo:
+    uses: ./.github/workflows/reuseme.yml
         
   win_workflow:
     runs-on: windows-latest
