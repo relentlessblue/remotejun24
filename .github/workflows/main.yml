@@ -20,4 +20,5 @@ jobs:
         
   win_workflow:
     runs-on: windows-latest
-    
+    steps:
+      - run: echo "I am on Windows!"
