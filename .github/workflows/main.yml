@@ -17,3 +17,7 @@ jobs:
       # Ensure that .NET is installed
       - name: Install .NET
         uses: codebeltnet/install-dotnet@v1
+        
+  win_workflow:
+    runs-on: windows-latest
+    
