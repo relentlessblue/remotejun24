@@ -23,10 +23,12 @@ jobs:
         uses: codebeltnet/install-dotnet@v1
 
       # Checkout the code
-      - uses: actions/checkout@v4.1.7
+      - name: Checkout the code
+        uses: actions/checkout@v4.1.7
 
       # install Node
-      - uses: actions/setup-node@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
         
   win_workflow:
     runs-on: windows-latest
