@@ -3,12 +3,15 @@ run-name: 🛠️ Testing out GitHub actions
 
 on: [push]
 
+env:
+  owner_name: jwesterl
+
 jobs:
   basic_workflow:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Job basic_workflow is executing as part of new workflow"
+      - run: echo "Job basic_workflow is executing as part of new workflow and is owned by $owner_name"
       
       # Ensure that .NET is installed
       - name: Install .NET
