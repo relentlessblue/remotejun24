@@ -21,6 +21,9 @@ jobs:
       # Ensure that .NET is installed
       - name: Install .NET
         uses: codebeltnet/install-dotnet@v1
+
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.7
         
   win_workflow:
     runs-on: windows-latest
