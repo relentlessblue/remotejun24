@@ -1,13 +1,17 @@
 name: GitHub actions demo
 run-name: 🛠️ Testing out GitHub actions
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 env:
   owner_name: jwesterl
 
 jobs:
   basic_workflow:
+    if: startsWith(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
 
     steps:
@@ -17,8 +21,17 @@ jobs:
       # Ensure that .NET is installed
       - name: Install .NET
         uses: codebeltnet/install-dotnet@v1
+
+      # Checkout the code
+      - uses: actions/checkout@v4.1.7
+
+      # install Node
+      - uses: actions/setup-node@v3
+          with:
+            node-version: '14'
         
   win_workflow:
     runs-on: windows-latest
     steps:
       - run: echo "I am on Windows!"
+      - name: Run Windows Command
