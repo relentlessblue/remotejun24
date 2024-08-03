@@ -12,6 +12,7 @@ jobs:
 
     steps:
       - run: echo "Job basic_workflow is executing as part of new workflow and is owned by $owner_name"
+      - run: echo "${{vars.REPO_VAR1}}
       
       # Ensure that .NET is installed
       - name: Install .NET
