@@ -12,7 +12,7 @@ env:
 
 jobs:
   basic_workflow:
-    if: startsWith(github.ref, 'ref/heads/main')
+    if: startsWith(github.ref, 'refs/heads/main')
     runs-on: ubuntu-latest
     steps:
       - run: echo "Job basic_workflow is executing as part of new workflow and is owned by $owner_name"
