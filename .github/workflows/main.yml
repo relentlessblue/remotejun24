@@ -31,7 +31,7 @@ jobs:
           node-version: '20'
           
       - name: Uses reusable workflow
-        uses: ./.github/workflow/resuseme.yml
+        uses: ./${{ env.WORK_DIR }}/local_checkout/.github/actions/my-action
         
   win_workflow:
     runs-on: windows-latest
