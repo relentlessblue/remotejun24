@@ -10,3 +10,5 @@ jobs:
     steps:
       - run: echo "Job basic_workflow is executing as part of new workflow"
       
+      - name: Install .NET
+        uses: codebeltnet/install-dotnet@v1
