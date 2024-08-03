@@ -21,4 +21,3 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo "I am on Windows!"
-      - name: Run Windows Command
